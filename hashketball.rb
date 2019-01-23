@@ -122,12 +122,10 @@ def num_points_scored(player_name_input)
   stats_hash = game_hash
   stats_hash.each do |location, team_data|
     players_array_of_hashes = team_data[:players]
-    players_array_of_hashes.each do |the_player_name, the_player_data|
-      binding.pry
-      counter = 0
-      if the_player_name = player_name_input
+    players_array_of_hashes.each_with_index do |the_player_hash, index|
+      if the_player_hash.has_key?(player_name)
         binding.pry
-        points = team_data[:players][player_name_input][:points]
+        points = team_data[:players][index][:points]
       end
     end
   end
