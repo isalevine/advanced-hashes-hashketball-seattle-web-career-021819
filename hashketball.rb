@@ -127,7 +127,8 @@ def num_points_scored(player_name_input)
       binding.pry
       if the_player_name = player_name_input
         binding.pry
-      points = team_data[:players][player_name_input][:points]
+        points = team_data[:players][player_name_input][:points]
+      end
     end
   end
   points
