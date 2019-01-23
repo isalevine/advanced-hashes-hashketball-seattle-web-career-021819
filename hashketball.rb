@@ -139,7 +139,6 @@ def shoe_size(input_player)
     player_hash = team_data[:players]
     player_hash.each_key do |their_name|
       if their_name == input_player
-        binding.pry
         shoes = team_data[:players][their_name][:shoe]
       end
     end
