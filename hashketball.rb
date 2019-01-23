@@ -213,13 +213,9 @@ def biggest_shoe_name
 end
 
 
-
-
-
 def big_shoe_rebounds
   rebounds_output = 0
   target_name = biggest_shoe_name
-
   stats = game_hash
   stats.each_value do |team_data|
     if team_data[:players].key?(target_name)
