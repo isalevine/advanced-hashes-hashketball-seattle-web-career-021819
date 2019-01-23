@@ -213,24 +213,13 @@ def biggest_shoe_name
 end
 
 
-def biggest_shoe_number
-  really_big_shoe = 0
-  stats = game_hash
-  stats.each_value do |team_data|
-    team_data[:players].each do |their_name, player_data|
-      if player_data[:shoe] > really_big_shoe
-        really_big_shoe = player_data[:shoe]
-      end
-    end
-  end
-  really_big_shoe
-end
+
 
 
 def big_shoe_rebounds
   rebounds_output = 0
   target_name = biggest_shoe_name
-  target_number = biggest_shoe_number
+
   stats = game_hash
   stats.each_value do |team_data|
     if team_data[:players].key?(target_name)
