@@ -195,3 +195,22 @@ def player_stats(name_input)
   end
   output_hash
 end
+
+
+def biggest_shoe
+  really_big_shoe = 0
+  stats = game_hash
+  stats.each_value do |team_data|
+    team_data[:players].each_value do |player_data|
+      if player_data[:shoe] > really_big_shoe
+        really_big_shoe = player_data[:shoe]
+      end
+    end
+  end
+  really_big_shoe
+end
+
+
+def big_shoe_rebounds
+  rebounds_output = 0
+  stats = game_hash
