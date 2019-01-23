@@ -131,10 +131,4 @@ def num_points_scored(player_name_input)
   points
 end
 
-def shoe_size(input_player)
-  shoes = 0
-  stats = game_hash
-  stats.each do |location, team_data|
-    player_array = team_data[:players]
-  end
-end
+
