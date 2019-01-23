@@ -124,10 +124,20 @@ def num_points_scored(player_name_input)
     players_hashes = team_data[:players]
     players_hashes.each do |the_player_name, player_data_hash|
       if the_player_name = player_name_input
+        binding.pry
         player_key = player_name_input
         points = team_data[:players][player_key][:points]
       end
     end
   end
   points
+end
+
+
+def shoe_size(input_player)
+  shoes = 0
+  stats = game_hash
+  stats.each do |location, team_data|
+    player_array = team_data[:players]
+  end
 end
