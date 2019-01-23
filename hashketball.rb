@@ -173,8 +173,10 @@ def player_numbers(team_input)
   numbers_array = []
   stats = game_hash
   stats.each do |location, team_data|
-    team_data[:players].each_value do |data_hash|
-      numbers_array << data_hash[:number]
+    if team_data[:team_name] == team_input
+      team_data[:players].each_value do |data_hash|
+        numbers_array << data_hash[:number]
+      end
     end
   end
   numbers_array
