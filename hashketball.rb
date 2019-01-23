@@ -121,9 +121,12 @@ def num_points_scored(player_name_input)
   points = 0
   stats_hash = game_hash
   stats_hash.each do |location, team_data|
+    binding.pry
     players_hash = team_data[:players]
     players_hash.each do |the_player_name, the_player_data_hash|
+      binding.pry
       if the_player_name = player_name_input
+        binding.pry
         points = the_player_data_hash[:points]
       end
     end
