@@ -145,3 +145,16 @@ def shoe_size(input_player)
   end
   shoes
 end
+
+
+def team_colors(team_input)
+  color_array = []
+  stats = game_hash
+  stats.each do |location, team_data|
+    if team_data[:team_name] == team_input
+      color_array = team_data[:colors]
+    end
+  end
+  color_array
+end
+      
