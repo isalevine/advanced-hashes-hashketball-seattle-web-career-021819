@@ -5,7 +5,7 @@ def game_hash
     :home => {
       :team_name => "Brooklyn Nets",
       :colors => ["Black", "White"],
-      :players => [
+      :players => {
         "Alan Anderson" => {
           :number => 0,
           :shoe => 16,
@@ -56,12 +56,12 @@ def game_hash
           :blocks => 11,
           :slam_dunks => 1
         }
-      ]
+      }
     },
     :away => {
       :team_name => "Charlotte Hornets",
       :colors => ["Turquoise", "Purple"],
-      :players => [
+      :players => {
         "Jeff Adrien" => {
           :number => 4,
           :shoe => 18,
@@ -112,7 +112,7 @@ def game_hash
           :blocks => 5,
           :slam_dunks => 12
         }
-      ]
+      }
     }
   }
 end
@@ -130,3 +130,10 @@ def num_points_scored(player_name_input)
   end
   points
 end
+
+def shoe_size(input_player)
+  shoes = 0
+  stats = game_hash
+  stats.each do |location, team_data|
+    player_array = team_data[:players]
+    player_array.each do |
