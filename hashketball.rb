@@ -136,4 +136,5 @@ def shoe_size(input_player)
   stats = game_hash
   stats.each do |location, team_data|
     player_array = team_data[:players]
-    player_array.each do |
+  end
+end
