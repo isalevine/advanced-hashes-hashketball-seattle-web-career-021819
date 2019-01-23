@@ -184,14 +184,14 @@ end
 
 
 def player_stats(name_input)
-  output_array = []
+  output_hash = {}
   stats = game_hash
   stats.each do |location, team_data|
     team_data[:players].each do |their_name, their_stats|
       if their_name == name_input
-        output_array = their_stats.values
+        output_hash = their_stats
       end
     end
   end
-  output_array
+  output_hash
 end
