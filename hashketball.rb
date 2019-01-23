@@ -1,4 +1,4 @@
-require 'pry'
+require "pry"
 
 def game_hash
   teams = {
@@ -121,10 +121,11 @@ def num_points_scored(player_name)
   points = 0
   stats_hash = game_hash
   stats_hash.each do |location, team_data|
+    binding.pry
     players_array = team_data[:players]
     if players_array.include?(player_name)
-      points = team_data[:players][player_name][:points]
       binding.pry
+      points = team_data[:players][player_name][:points]
     end
   end
   points
