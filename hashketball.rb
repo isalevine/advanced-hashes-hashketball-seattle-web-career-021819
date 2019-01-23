@@ -157,3 +157,13 @@ def team_colors(team_input)
   end
   color_array
 end
+
+
+def team_names
+  team_array = []
+  stats = game_hash
+  stats.each do |location, team_data|
+    team_array << team_data[:team_name]
+  end
+  team_array
+end
