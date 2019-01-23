@@ -157,4 +157,3 @@ def team_colors(team_input)
   end
   color_array
 end
-      
