@@ -123,9 +123,7 @@ def num_points_scored(player_name_input)
   stats_hash.each do |location, team_data|
     players_array_of_hashes = team_data[:players]
     players_array_of_hashes.each_with_index do |the_player_hash, index|
-      binding.pry
       if the_player_hash.has_key?(player_name_input)
-        binding.pry
         points = team_data[:players][index][:points]
       end
     end
