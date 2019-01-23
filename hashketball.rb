@@ -124,7 +124,6 @@ def num_points_scored(jeff_name)
     players_hash = team_data[:players]
     players_hash.each do |the_player_name, the_player_data_hash|
       if the_player_name == jeff_name
-
         points = stats_hash[location][:players][jeff_name][:points]
       end
     end
