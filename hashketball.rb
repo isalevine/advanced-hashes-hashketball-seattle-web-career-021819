@@ -124,7 +124,7 @@ def num_points_scored(player_name_input)
     players_array_of_hashes = team_data[:players]
     players_array_of_hashes.each_with_index do |the_player_hash, index|
       if the_player_hash.has_key?(player_name_input)
-        points = team_data[:players][index][:points]
+        points = team_data[:players][index][player_name_input][:points]
       end
     end
   end
