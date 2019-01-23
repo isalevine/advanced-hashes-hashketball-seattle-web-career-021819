@@ -117,15 +117,17 @@ def game_hash
   }
 end
 
-def num_points_scored(player_name)
+def num_points_scored(player_name_input)
   points = 0
   stats_hash = game_hash
   stats_hash.each do |location, team_data|
     binding.pry
-    players_array = team_data[:players]
-    if players_array.include?(player_name)
+    players_array_of_hashes = team_data[:players]
+    players_array_of_hashes.each do |the_player_name, the_player_data|
       binding.pry
-      points = team_data[:players][player_name][:points]
+      if the_player_name = player_name_input
+        binding.pry
+      points = team_data[:players][player_name_input][:points]
     end
   end
   points
