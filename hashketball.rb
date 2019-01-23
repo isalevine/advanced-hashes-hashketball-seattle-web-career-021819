@@ -122,6 +122,7 @@ def num_points_scored(player_name)
     players_array = team_data[:players]
     if players_array.include?(player_name)
       points = team_data[:players][player_name][:points]
+      binding.pry
     end
   end
   points
